@@ -1,0 +1,24 @@
+{
+  "name": "neighborhood-proxy",
+  "version": "1.0.0",
+  "description": "proxy server for consolidated app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hack-reactor-front-end-abrm/Neighborhood-Proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hack-reactor-front-end-abrm/Neighborhood-Proxy/issues"
+  },
+  "homepage": "https://github.com/hack-reactor-front-end-abrm/Neighborhood-Proxy#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  }
+}
