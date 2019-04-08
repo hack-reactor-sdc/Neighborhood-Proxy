@@ -26,7 +26,7 @@ app.get('/items/:id', (req, res) => {
 })
 
 app.get('/:id', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public'))
+  res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
 app.listen(port, () => {
