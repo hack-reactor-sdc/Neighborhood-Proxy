@@ -25,6 +25,10 @@ app.get('/items/:id', (req, res) => {
     .catch(err => console.log(err))
 })
 
+app.get('/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public'))
+})
+
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
 });
