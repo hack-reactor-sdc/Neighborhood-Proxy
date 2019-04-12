@@ -4,8 +4,12 @@
 
 #Mortgage {
     display: block;
+    width: 80%;
+    margin: auto;
 }
 
 #Neighborhood {
     display: block;
+    width: 80%;
+    margin: auto;
 }
