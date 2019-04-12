@@ -19,12 +19,12 @@ app.get('/items', (req, res) => {
     .catch(err => console.log(err))
 })
 
-app.get('/items/:id', (req, res) => {
-    var id = req.params.id;
-    axios.get(`http://localhost:3007/items/${id}`)
-    .then(result => res.send(result.data))
-    .catch(err => console.log(err))
-})
+// app.get('/items/:id', (req, res) => {
+//     var id = req.params.id;
+//     axios.get(`http://localhost:3007/items/${id}`)
+//     .then(result => res.send(result.data))
+//     .catch(err => console.log(err))
+// })
 
 app.get('/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'))
