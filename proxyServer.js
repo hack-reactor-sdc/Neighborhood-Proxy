@@ -13,7 +13,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/items', (req, res) => {
-    console.log('/items request went to proxy server')
     axios.get('http://localhost:3007/items')
     .then(result => res.send(result.data))
     .catch(err => console.log(err))
