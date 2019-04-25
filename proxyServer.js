@@ -13,32 +13,32 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // development
-// app.get('/items', (req, res) => {
-//     axios.get('http://localhost:3007/items')
-//     .then(result => res.send(result.data))
-//     .catch(err => console.log(err))
-// })
-
-// app.get('/items/:id', (req, res) => {
-//     var id = req.params.id;
-//     axios.get(`http://localhost:3007/items/${id}`)
-//     .then(result => res.send(result.data))
-//     .catch(err => console.log(err))
-// })
-
-// production
 app.get('/items', (req, res) => {
-  axios.get('http://ec2-54-209-58-148.compute-1.amazonaws.com:3007/items')
-  .then(result => res.send(result.data))
-  .catch(err => console.log(err))
+    axios.get('http://localhost:3007/items')
+    .then(result => res.send(result.data))
+    .catch(err => console.log(err))
 })
 
 app.get('/items/:id', (req, res) => {
-  var id = req.params.id;
-  axios.get(`http://ec2-54-209-58-148.compute-1.amazonaws.com:3007/items/${id}`)
-  .then(result => res.send(result.data))
-  .catch(err => console.log(err))
+    var id = req.params.id;
+    axios.get(`http://localhost:3007/items/${id}`)
+    .then(result => res.send(result.data))
+    .catch(err => console.log(err))
 })
+
+// production
+// app.get('/items', (req, res) => {
+//   axios.get('http://ec2-54-209-58-148.compute-1.amazonaws.com:3007/items')
+//   .then(result => res.send(result.data))
+//   .catch(err => console.log(err))
+// })
+
+// app.get('/items/:id', (req, res) => {
+//   var id = req.params.id;
+//   axios.get(`http://ec2-54-209-58-148.compute-1.amazonaws.com:3007/items/${id}`)
+//   .then(result => res.send(result.data))
+//   .catch(err => console.log(err))
+// })
 
 
 app.get('/:id', (req, res) => {
